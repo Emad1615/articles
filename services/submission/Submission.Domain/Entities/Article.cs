@@ -1,0 +1,15 @@
+﻿using Articles.Abstractions.Enums;
+
+namespace Submission.Domain.Entities
+{
+    public class Article
+    {
+        public int Id { get; set; }
+        public required string Title { get; set; }
+        public required string Scope { get; set; }
+        public required ArticleType Type { get; set; }
+        public ArticleStage Stage { get; internal set; }
+        public int JournalId { get; init; }
+        public Journal Journal { get; init; }
+    }
+}
